@@ -1,6 +1,6 @@
 export const getUVData = async ({ lat, lon }: { lat: string; lon: string }) => {
   const data = await fetch(
-    `https://${process.env.FLY_URL}/api/weather/uv_index?lat=${lat}&lon=${lon}`
+    `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/weather/uv_index?lat=${lat}&lon=${lon}`
   )
 
   if (!data.ok) {
